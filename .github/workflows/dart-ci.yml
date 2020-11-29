@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: PATH="$PATH:/usr/lib/dart/bin" pub get
     - name: Run tests
-      run: PATH="$PATH:/usr/lib/dart/bin" pub run test
+      run: PATH="$PATH:/usr/lib/dart/bin" pub run build_runner test --fail-on-severe -- -p chrome
     - name: Run analyzer
       run: PATH="$PATH:/usr/lib/dart/bin" dartanalyzer --fatal-infos --fatal-warnings .
       if: always()
