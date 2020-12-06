@@ -10,3 +10,7 @@ pubspec.lock
 **/.dart_tool/
 **/doc/api/
 *.g.dart
+
+
+# JetBrains generated files
+**/.idea/
