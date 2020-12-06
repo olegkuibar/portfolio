@@ -17,3 +17,4 @@ linter:
     - unnecessary_new
     - unrelated_type_equality_checks
     - valid_regexps
+    - avoid_empty_else
