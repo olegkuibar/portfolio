@@ -1,15 +1,17 @@
+import 'package:angular_app/src/project-details_component.template.dart' as pdTmp;
 import 'package:angular_router/angular_router.dart';
-import 'package:angular_app/app_component.template.dart' as ng;
 
 import 'route_paths.dart';
 
+export 'route_paths.dart';
+
 class Routes {
-  static final home = RouteDefinition(
-    routePath: RoutePaths.home,
-    component: ng.AppComponentNgFactory,
+  static final project_details = RouteDefinition(
+    routePath: RoutePaths.project_details,
+    component: pdTmp.OkpProjectDetailsComponentNgFactory,
   );
 
   static final all = <RouteDefinition>[
-    home,
+    project_details,
   ];
 }

@@ -4,7 +4,7 @@ import 'route_path_leaf.dart';
 
 class RoutePaths {
   static final home = RoutePath(path: '/');
-  static final projects = RoutePath(path: RoutePathLeafs.project);
+  static final projects = RoutePath(path: RoutePathLeaf.project);
   static final project_details =
-      RoutePath(path: '${RoutePathLeafs.project}/:name');
+      RoutePath(path: '${RoutePathLeaf.project}/:name');
 }
