@@ -1,0 +1,7 @@
+:host {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1,100% [col-start]);
+    grid-template-rows: repeat(3, 33vh);
+  }
+}
