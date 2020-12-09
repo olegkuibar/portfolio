@@ -1,4 +1,4 @@
-import 'package:angular_app/src/project-details_component.template.dart' as pdTmp;
+import 'package:portfolio_angular_app/src/project-details_component.template.dart' as pdTmp;
 import 'package:angular_router/angular_router.dart';
 
 import 'route_paths.dart';
