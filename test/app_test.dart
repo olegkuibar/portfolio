@@ -1,7 +1,8 @@
 @TestOn('browser')
 
-import 'package:angular_app/app_component.dart';
-import 'package:angular_app/app_component.template.dart' as ng;
+import 'package:portfolio_angular_app/app_component.dart';
+import 'package:portfolio_angular_app/app_component.template.dart' as ng;
+
 import 'package:angular_test/angular_test.dart';
 import 'package:test/test.dart';
 
@@ -14,19 +15,15 @@ void main() {
     fixture = await testBed.create();
   });
 
+
   tearDown(disposeAnyRunningTest);
+  
+  test('Should contain three sections', () {
+    final sections = fixture.rootElement.getElementsByClassName('section');
+    int count = 0;
 
-  test('Default greeting', () {
-    expect(fixture.text, 'Hello Angular');
-  });
+    sections.forEach((element) => count++ );
 
-  test('Greet world', () async {
-    await fixture.update((c) => c.name = 'World');
-    expect(fixture.text, 'Hello World');
-  });
-
-  test('Greet world HTML', () {
-    final html = fixture.rootElement.innerHtml;
-    expect(html, '<h1>Hello Angular</h1>');
+    expect(count, 3);
   });
 }
