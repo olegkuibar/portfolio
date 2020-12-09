@@ -1,14 +1,27 @@
-@TestOn('browser')
+import 'package:angular/angular.dart';
+import 'package:angular_router/angular_router.dart';
 
 import 'package:portfolio_angular_app/app_component.dart';
-import 'package:portfolio_angular_app/app_component.template.dart' as ng;
+import 'package:portfolio_angular_app/app_component.template.dart' as self;
 
 import 'package:angular_test/angular_test.dart';
 import 'package:test/test.dart';
 
+import 'Utils/injector-prob.dart';
+
+@TestOn('browser')
+@GenerateInjector([
+  ClassProvider(RouterOutlet),
+  ClassProvider(RouterLink),
+  ClassProvider(RouterLinkActive)
+])
+final InjectorFactory rootInjector = self.rootInjector$Injector;
+
 void main() {
+  final injector = InjectorProbe(rootInjector);
+
   final testBed =
-      NgTestBed.forComponent<AppComponent>(ng.AppComponentNgFactory);
+      NgTestBed.forComponent<AppComponent>(self.AppComponentNgFactory, rootInjector: injector.factory);
   NgTestFixture<AppComponent> fixture;
 
   setUp(() async {
