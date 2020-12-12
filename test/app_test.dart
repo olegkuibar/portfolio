@@ -3,7 +3,7 @@ import 'package:angular_router/angular_router.dart';
 
 import 'package:portfolio_angular_app/app_component.dart';
 import 'package:portfolio_angular_app/app_component.template.dart' as appTmp;
-import 'main.template.dart' as self;
+import '../web/main.template.dart' as self;
 
 import 'package:angular_test/angular_test.dart';
 import 'package:test/test.dart';
