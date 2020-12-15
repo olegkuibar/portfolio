@@ -8,7 +8,7 @@ import 'src/core/routes.dart';
 @Component(
     selector: 'my-app',
     templateUrl: './app_component.html',
-    styleUrls: const ['./app_component.css'],
+    styleUrls: ['./app_component.css'],
     directives: [...routerDirectives, OkpHeadingComponent],
     exports: [RoutePaths, Routes])
 class AppComponent {}
