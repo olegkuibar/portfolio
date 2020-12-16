@@ -26,8 +26,8 @@ final InjectorFactory rootInjector = self.rootInjector$Injector;
 void main() {
   final injector = InjectorProbe(rootInjector);
 
-  final testBed =
-      NgTestBed.forComponent<AppComponent>(ng.AppComponentNgFactory, rootInjector: injector.factory);
+  final testBed = NgTestBed.forComponent<AppComponent>(ng.AppComponentNgFactory,
+      rootInjector: injector.factory);
   NgTestFixture<AppComponent> fixture;
 
   setUp(() async {
@@ -35,9 +35,10 @@ void main() {
   });
 
   tearDown(disposeAnyRunningTest);
-  
+
   test('Should contain three sections', () {
-    final sectionCount = fixture.rootElement.children.first.children.length; // dirty way to access 'section' node count
+    final sectionCount = fixture.rootElement.children.first.children
+        .length; // dirty way to access 'section' node count
     expect(sectionCount, 3);
   });
 }
