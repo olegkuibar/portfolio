@@ -2,7 +2,7 @@
 header,
 footer {
   @apply dark:bg-black dark:bg-opacity-90;
-  @apply dark:text-white #{!important};
+  @apply dark:text-white !important;
 }
 
 main {

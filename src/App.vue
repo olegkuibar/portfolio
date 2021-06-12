@@ -64,44 +64,53 @@ main,
 footer {
   display: flex;
 }
-#app {
-  display: flex;
-  flex-direction: column;
-}
+
 header {
   flex-direction: column;
   height: variables.$header-size;
 }
+footer {
+  flex-direction: row;
+  height: variables.$footer-size;
+}
+
 main {
   flex: 1;
   flex-direction: row;
 
   @apply py-4;
 }
-
-footer {
-  flex-direction: row;
-  height: variables.$footer-size;
+main > div > *:not(:last-child) {
+  @apply mb-5;
 }
 
 section {
   @apply p-5;
 }
 
-main > div > *:not(:last-child) {
-  @apply  mb-5;
-}
-
-@media (min-width: 768px) {
-  main > div > *:not(:last-child) {
-    @apply  mb-0;
-  }
+#app {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
   @apply flex flex-col md:flex-row container px-5 md:px-0 mx-auto;
 }
+.section-group-wrapper {
+  // overflow/scroll
+  overflow: auto;
+  max-height: 84.5vh;
 
+  // common decoration
+  @apply bg-gray-500 bg-opacity-20 p-5 rounded-xl md:rounded-none md:rounded-r-xl;
+
+  // common
+  @apply flex flex-col flex-1 md:w-8/12 w-full;
+
+  section {
+    @apply flex flex-1;
+  }
+}
 .profile-section {
   // theme light
   @apply border-black border-opacity-25;
@@ -116,19 +125,9 @@ main > div > *:not(:last-child) {
   @apply flex flex-col w-full md:pr-4 md:w-4/12;
 }
 
-.section-group-wrapper {
-  // overflow/scroll
-  overflow: auto;
-  max-height: 84.5vh;
-
-  // common decoration
-  @apply bg-gray-500 bg-opacity-20 p-5 rounded-xl md:rounded-none md:rounded-r-xl;
-
-  // common
-  @apply flex flex-col flex-1 md:w-8/12 w-full;
-
-  section {
-    @apply flex flex-1;
+@media (min-width: 768px) {
+  main > div > *:not(:last-child) {
+    @apply mb-0;
   }
 }
 </style>
