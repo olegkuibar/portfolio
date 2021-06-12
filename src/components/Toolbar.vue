@@ -24,7 +24,7 @@ import { defineComponent, PropType } from "vue";
 
 import ThemeToggleButton from "../shared/theme-toggle-button.vue";
 
-import { INavItem } from "../types/nav-items";
+import { INavItem } from "../types/nav-items.interface";
 
 export default defineComponent({
   name: "Toolbar",
