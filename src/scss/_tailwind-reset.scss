@@ -1,0 +1,4 @@
+// remove outline and focus for buttons
+button {
+  @apply outline-none focus-within:shadow-none focus-within:outline-none;
+}

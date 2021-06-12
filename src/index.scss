@@ -1,0 +1,22 @@
+/* ./src/index.scss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "scss/tailwind-reset";
+@import "scss/theme/dark.scss";
+@import "scss/theme/light.scss";
+@import "scss/scrollbar";
+
+@import "../node_modules/v-tooltip/dist/v-tooltip.css";
+
+html,
+body,
+#app {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+body {
+  @apply bg-white;
+}
