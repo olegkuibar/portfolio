@@ -1,0 +1,10 @@
+// application wide color style
+header,
+footer {
+  @apply bg-gray-200 text-gray-200;
+  @apply text-black #{!important};
+}
+
+main {
+  @apply bg-gray-100
+}
